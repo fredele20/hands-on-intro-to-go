@@ -1,10 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"golang.org/x/exp/constraints"
+)
 
 // create a numeric interface with a type set
 type numeric interface {
-	~int | ~float64
+	// ~int | ~float64
+	// implementing constraints
+	constraints.Integer | constraints.Float
 	grow()
 }
 
