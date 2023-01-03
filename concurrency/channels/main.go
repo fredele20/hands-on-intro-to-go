@@ -23,6 +23,7 @@ func main() {
 	result := <-ch
 	fmt.Println("Result: ", result)
 
+	// buffered channel
 	ch2 := make(chan string, 2)
 
 	ch2 <- "James"
